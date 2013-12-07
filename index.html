@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf8">
+		<base href="/">
+		<title>Angular Express Seed App</title>
+		<link rel="stylesheet" href="public/css/app.css">
+	</head>
+	<body>
+		<div ng-controller="AppCtrl">
+		<!--The double brackets refer to the $scope.name variable in public/js/controllers.js-->
+		<h2>Hello {{name}}</h2>
+		<ul class="menu">
+		<li><a href="view1">view1</a></li>
+		<li><a href="view2">view2</a></li>
+		</ul>
+		<!--The partials are embeded in the ng-view div-->
+		<div ng-view></div>
+		<div>Angular seed app: v<span app-version></span></div>
+		</div>
+	</body>
+	<script src="public/js/lib/angular/angular.js"></script>
+	<script src="public/js/app.js"></script>
+	<script src="public/js/services.js"></script>
+	<script src="public/js/controllers.js"></script>
+	<script src="public/js/filters.js"></script>
+	<script src="public/js/directives.js"></script>
+</html>
