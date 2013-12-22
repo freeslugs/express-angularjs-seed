@@ -7,7 +7,7 @@ angular.module('myApp.controllers', []).
 
 		$http({
 			method: 'GET',
-			url: '/api/getHere'
+			url: '/api/name'
 		}).success(function (data, status, headers, config) {
 			$scope.name = data.name;
 		}).error(function (data, status, headers, config) {
