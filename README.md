@@ -1,5 +1,4 @@
 # Express Angular Seed
-======================
 
 [Express.js](expressjs.com) [Angular.js](http://angularjs.org/) Seed 
  – No templating system, no jade or ejs. 
