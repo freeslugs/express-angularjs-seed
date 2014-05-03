@@ -1,8 +1,12 @@
 {
-	"name": "application-name",
-	"version": "0.0.1",
-	"private"		: true,
-	"dependencies"	: {
-		"express": "*"
-	}
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "*",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.2",
+    "express-method-override": "0.0.3",
+    "express-error-handler": "~0.5.4"
+  }
 }

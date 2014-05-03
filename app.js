@@ -5,8 +5,11 @@
 var express = require('express'),
 	api = require('./routes/api'),
 	http = require('http'),
-	path = require('path');
-
+	path = require('path'),
+  logger = require('morgan'),
+  bodyParser = require('body-parser'),
+  methodOverride = require('express-method-override'),
+  errorHandler = require('express-error-handler');
 var app = module.exports = express();
 
 
@@ -16,14 +19,14 @@ var app = module.exports = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.use(express.logger('dev'));
-app.use(express.bodyParser()); 	
-app.use(express.methodOverride()); 	
+app.use(logger);
+app.use(bodyParser());
+app.use(methodOverride());
 //app.use(app.router); – not sure if we need this
 
 // development only
 if (app.get('env') === 'development') {
-	app.use(express.errorHandler());
+	app.use(errorHandler());
 }
 
 // production only
