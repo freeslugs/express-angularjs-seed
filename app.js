@@ -6,10 +6,10 @@ var express = require('express'),
 	api = require('./routes/api'),
 	http = require('http'),
 	path = require('path'),
-  logger = require('morgan'),
-  bodyParser = require('body-parser'),
-  methodOverride = require('express-method-override'),
-  errorHandler = require('express-error-handler');
+  	logger = require('morgan'),
+  	bodyParser = require('body-parser'),
+  	methodOverride = require('express-method-override'),
+  	errorHandler = require('express-error-handler');
 var app = module.exports = express();
 
 
@@ -19,9 +19,9 @@ var app = module.exports = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.use(logger);
-app.use(bodyParser());
-app.use(methodOverride());
+// app.use(logger);
+// app.use(bodyParser());
+// app.use(methodOverride());
 //app.use(app.router); – not sure if we need this
 
 // development only
